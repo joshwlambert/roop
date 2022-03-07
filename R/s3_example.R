@@ -7,10 +7,16 @@ lab_member <- list(name = "Dave Smith",
 class(lab_member) <- "s3_student"
 attributes(lab_member)
 
-print <- function(obj) {
+# create generic function
+print <- function() {
   UseMethod("print")
 }
 
-name.default <- function(obj) {
-  cat("Name of lab student is: ", name)
+print.s3_student <- function(obj) {
+  cat("S3 Student Class \n")
+  cat("Name of lab student is: ", obj$name, "\n")
+  cat("Age of lab student is: ", obj$age, "\n")
+  cat("Research topic is: ", obj$research_topic)
 }
+
+lab_member

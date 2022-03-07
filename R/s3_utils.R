@@ -13,3 +13,6 @@ unclass(lab_member)
 
 sloop::ftype(print)
 sloop::s3_dispatch(print(lab_member))
+
+typeof(lab_member)
+attributes(lab_member)

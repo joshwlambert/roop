@@ -1,4 +1,4 @@
-r6_Student <- R6::R6Class(
+r6_student <- R6::R6Class(
   classname = "r6_student",
 
   public = list(

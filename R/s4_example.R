@@ -27,3 +27,9 @@ s4_student <- setClass(
   validity = check_s4_student
 )
 
+setGeneric("print", "s4_student", standardGeneric(""))
+setMethod("print", "s4_student", function(object) {
+  cat("S4 Student Class")
+  cat("Name of lab student is: ", object@name)
+})
+
