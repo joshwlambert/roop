@@ -1,16 +1,16 @@
 # validity function
-check_student <- function(obj) {
-  if (obj@age > 0) {
+check_s4_student <- function(object) {
+  if (object@age > 0 || is.na(object@age)) {
     stop("Age must be greater than zero")
   }
-  if (obj@research_topic == "ecology_of_fear") {
+  if (object@research_topic == "ecology_of_fear" || is.na(object@age)) {
     stop("Student cannot study this topic")
   }
 }
 
 # class definition
-setClass(
-  Class = "Student",
+s4_student <- setClass(
+  Class = "s4_student",
 
   slots = list(
     name = "character",
@@ -24,8 +24,6 @@ setClass(
     research_topic = NA_character_
   ),
 
-  validity = check_student
+  validity = check_s4_student
 )
 
-# constructor
-student <- methods::new("Student")
