@@ -4,11 +4,14 @@ Useful resources:
 
 Papers:
 
+* [Chambers, J.M. (2020) S, R, and Data Science](https://dl.acm.org/doi/pdf/10.1145/3386334)
+* Chambers, J.M. (2014) Object-Oriented Programming, Functional Programming and R
+
 Books:
 
 Websites:
 
-* 
+* [Advanced R Object-Oriented](https://adv-r.hadley.nz/oo.html) Chapters 12-16
 
 Presentations:
 

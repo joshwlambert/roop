@@ -19,20 +19,19 @@ ape::Nnode(tree)
 # the phylo4 class is from the phylobase R package
 # see https://cran.r-project.org/web/packages/phylobase/vignettes/phylobase.pdf
 # for details
-
-#####TODO change class elements to match modern use and other example
-#### TODO get checkphylo4 function from phylobase
+# Note the validity function is commented out in this example, but is included
+# in the phylobase class
 
 library(phylobase)
 
 setClass(
   "phylo4",
-  representation(edge = "matrix",
-                 edge.length = "numeric",
-                 label = "character",
-                 edge.label = "character",
-                 order = "character",
-                 annote = "list"),
+  slots = c(edge = "matrix",
+            edge.length = "numeric",
+            label = "character",
+            edge.label = "character",
+            order = "character",
+            annote = "list"),
   prototype = list(
     edge = matrix(nrow = 0, ncol = 2,
                   dimnames = list(NULL, c("ancestor", "descendant"))),
@@ -41,8 +40,9 @@ setClass(
     edge.label = character(0),
     order = "unknown",
     annote = list()
-  ),
-  validity = checkPhylo4)
+  )
+  #validity = checkPhylo4
+)
 
-tree <- new("phylo4")
+tree <- as(tree, "phylo4")
 plot(tree)
