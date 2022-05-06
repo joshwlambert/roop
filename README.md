@@ -12,6 +12,7 @@ Books:
 Websites:
 
 * [Advanced R Object-Oriented](https://adv-r.hadley.nz/oo.html) Chapters 12-16
+* [R6 Introduction](https://r6.r-lib.org/articles/Introduction.html)
 
 Presentations:
 
